@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS gestion_maestra CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE gestion_maestra;
+
+CREATE TABLE IF NOT EXISTS empleados (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    cedula VARCHAR(20) NOT NULL UNIQUE,
+    cargo VARCHAR(100) NOT NULL,
+    departamento VARCHAR(100) NOT NULL,
+    fecha_ingreso DATE NOT NULL,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;

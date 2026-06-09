@@ -1,0 +1,117 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Empleados</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<!-- Fondo con CSS
+<body class="bg-base-200 min-h-screen flex items-center justify-center p-4">
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, #6366f1, #4f46e5); 
+            background-attachment: fixed;
+        }
+    </style>
+-->
+
+    <body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-r from-indigo-500 to-purple-600"></body>
+
+
+
+
+    <div class="card w-full max-w-lg bg-base-100 shadow-xl border border-base-300">
+        <div class="card-body">
+            <h2 class="card-title text-2xl font-bold text-primary mb-3 flex justify-center">
+                Registro de Empleados
+            </h2>
+            
+            <!-- Alertas -->
+            <div id="alert-container" class="mb-4 hidden"></div>
+
+            <form id="employee-form" novalidate class="space-y-4">
+                
+                <!-- Nombre Completo -->
+                <div class="form-control w-full">
+                    <label class="label" for="nombre">
+                        <span class="label-text font-semibold">Nombre Completo</span>
+                    </label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Simón Bolívar" class="input input-bordered input-secondary w-full" required />
+                    <span class="text-error text-xs mt-1 hidden" id="err-nombre"></span>
+                </div>
+
+                <!-- Cédula -->
+                <div class="form-control w-full">
+                    <label class="label" for="cedula">
+                        <span class="label-text font-semibold">Cédula de Identidad</span>
+                    </label>
+                    <input type="text" id="cedula" name="cedula" placeholder="Ej. V-12345678 o 12345678" class="input input-bordered input-secondary w-full" required />
+                    <span class="text-error text-xs mt-1 hidden" id="err-cedula"></span>
+                </div>
+
+                <!-- Cargo -->
+                <div class="form-control w-full">
+                    <label class="label" for="cargo">
+                        <span class="label-text font-semibold">Cargo</span>
+                    </label>
+                    <input type="text" id="cargo" name="cargo" placeholder="Ej. Analista de Sistemas" class="input input-bordered input-secondary w-full" required />
+                    <span class="text-error text-xs mt-1 hidden" id="err-cargo"></span>
+                </div>
+
+                <!-- Departamento -->
+                <div class="form-control w-full">
+                    <label class="label" for="departamento">
+                        <span class="label-text font-semibold">Departamento / Área</span>
+                    </label>
+                    <select id="departamento" name="departamento" class="select select-bordered input-secondary w-full" required>
+                        <option value="" disabled selected>Seleccione un departamento</option>
+                        <option value="Tecnología e Informática">Tecnología e Informática</option>
+                        <option value="Recursos Humanos">Recursos Humanos</option>
+                        <option value="Administración y Finanzas">Administración y Finanzas</option>
+                        <option value="Atención al Ciudadano">Atención al Ciudadano</option>
+                        <option value="Planificación y Desarrollo">Planificación y Desarrollo</option>
+                        <option value="Servicios Generales">Servicios Generales</option>
+                        <option value="Legal y Asesoría Jurídica">Legal y Asesoría Jurídica</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                    <span class="text-error text-xs mt-1 hidden" id="err-departamento"></span>
+                </div>
+
+    
+                <div class="form-control w-full" id="contenedor-otro-departamento" style="display: none;">
+                    <label class="label" for="otro_departamento">
+                         <span class="label-text font-semibold">Específique el Departamento / Área</span>
+                    </label>
+                    <input type="text" id="otro_departamento" name="otro_departamento" placeholder="Ej. Control de Estudios" class="input input-bordered input-secondary w-full" />
+                    <span class="text-error text-xs mt-1 hidden" id="err-otro_departamento"></span>
+                </div>
+
+
+                <!-- Fecha de Ingreso -->
+                <div class="form-control w-full">
+                    <label class="label" for="fecha_ingreso">
+                        <span class="label-text font-semibold">Fecha de Ingreso</span>
+                    </label>
+                    <input type="date" id="fecha_ingreso" name="fecha_ingreso" class="input input-bordered input-secondary w-full" required />
+                    <span class="text-error text-xs mt-1 hidden" id="err-fecha_ingreso"></span>
+                </div>
+
+                <!-- Envío -->
+                <div class="form-control w-full pt-4">
+                    <button type="submit" id="btn-submit" class="btn btn-primary w-full text-white">
+                        <span id="btn-text">Finalizar Registro</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+</html>
+
+
+
