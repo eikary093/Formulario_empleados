@@ -8,18 +8,19 @@
 </head>
 
 <!-- Fondo con CSS
-<body class="bg-base-200 min-h-screen flex items-center justify-center p-4">
+<body class="bg-base-200 min-h-screen w-full flex flex-col items-center justify-start md:justify-center p-4">
     <style>
-        body{
+        body {
             font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(to right, #6366f1, #4f46e5); 
+            background-image: linear-gradient(to right, #6366f1, #a855f7);
             background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     </style>
 -->
 
-    <body class="min-h-screen flex items-center justify-center p-4 bg-gradient-to-r from-indigo-500 to-purple-600"></body>
-
+    <body class="min-h-screen w-full flex flex-col items-center justify-start md:justify-center p-4 bg-gradient-to-r from-indigo-500 via-purple-600 to-indigo-700 bg-attachment-fixed bg-no-repeat bg-cover">
 
 
 
@@ -83,7 +84,7 @@
     
                 <div class="form-control w-full" id="contenedor-otro-departamento" style="display: none;">
                     <label class="label" for="otro_departamento">
-                         <span class="label-text font-semibold">Específique el Departamento / Área</span>
+                         <span class="label-text font-semibold">Especifique el Departamento / Área</span>
                     </label>
                     <input type="text" id="otro_departamento" name="otro_departamento" placeholder="Ej. Control de Estudios" class="input input-bordered input-secondary w-full" />
                     <span class="text-error text-xs mt-1 hidden" id="err-otro_departamento"></span>
@@ -109,7 +110,7 @@
         </div>
     </div>
 
-    <script src="src/main.js"></script>
+    <script src="dist/main.js"></script>
 </body>
 </html>
 
